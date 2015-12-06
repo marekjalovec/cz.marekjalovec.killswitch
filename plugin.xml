@@ -1,0 +1,22 @@
+    <?xml version="1.0" encoding="UTF-8"?>
+    <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+            id="cz.marekjalovec.killswitch" version="0.0.1">
+        <name>KillSwitch</name>
+        <description>KillSwitch</description>
+        <license>MIT</license>
+        <keywords>cordova,ios,terminate,kill</keywords>
+        <js-module src="www/KillSwitch.js" name="KillSwitch">
+            <clobbers target="KillSwitch" />
+        </js-module>
+        <platform name="ios">
+            <config-file target="config.xml" parent="/*">
+                <feature name="KillSwitch">
+                    <param name="ios-package" value="KillSwitch"/>
+                </feature>
+            </config-file>
+            <header-file src="src/ios/KillSwitch.h" />
+            <header-file src="src/ios/KillSwitchView.h" />
+            <source-file src="src/ios/KillSwitch.m" />
+            <source-file src="src/ios/KillSwitchView.m" />
+        </platform>
+    </plugin>
